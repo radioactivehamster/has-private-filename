@@ -1,0 +1,46 @@
+.TH "HAS-PRIVATE-FILENAME" "3" "June 10, 2015" "has-private-filename 0.1.0" "Library Functions Manual"
+.nh
+.if n .ad l
+.SH "NAME"
+\fBhas-private-filename\fR
+\- Determine if a filename is
+\(Lqprivate\(Rq
+e.g. prefixed with a
+\(Lq_\(Rq
+(underscore.)
+.SH "SYNOPSIS"
+\fIvar hasPrivateFilename = require('has-private-filename');\fR
+.HP 4n
+\fBhasPrivateFilename\fR(\fIstr\fR);
+.SH "DESCRIPTION"
+The
+\fBhas-private-filename\fR()
+extension takes a file base-name string representation and determines if it
+matches the common
+\(Lqprivate\(Rq
+file naming convention. In which private files are prefixed with an underscore
+\(Lq_\(Rq
+whereas standard files are not.
+.SH "RETURN VALUES"
+Upon successful completion, the value of
+\fItrue\fR
+is returned; otherwise the value
+\fIfalse\fR
+is returned to indicate the inverse.
+.SH "EXAMPLES"
+The following demonstrates the expected return values.
+.nf
+.RS 6n
+
+\'use strict';
+
+var assert = require('assert');
+var hasPrivateFilename = require('has-private-filename');
+
+assert(hasPrivateFilename('_example.file') === true);
+assert(hasPrivateFilename('example.file') === false);
+.RE
+.fi
+.SH "AUTHORS"
+Benner, James
+\(la\fBradioactivehamster.com\fR\(ra

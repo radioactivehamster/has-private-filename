@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>
+table.head, table.foot { width: 100%; }
+td.head-rtitle, td.foot-os { text-align: right; }
+td.head-vol { text-align: center; }
+table.foot td { width: 50%; }
+table.head td { width: 33%; }
+div.spacer { margin: 1em 0; }
+</style>
+<title>
+HAS-PRIVATE-FILENAME(3) (prm)</title>
+</head>
+<body>
+<div class="mandoc">
+<div class="section">
+<h1 id="x4e414d45">NAME</h1> <b class="name">has-private-filename</b> &#8212; <span class="desc">Determine if a filename is &#8220;private&#8221; e.g. prefixed with a &#8220;_&#8221; (underscore.)</span></div>
+<div class="section">
+<h1 id="x53594e4f50534953">SYNOPSIS</h1> <b class="var">var hasPrivateFilename = require('has-private-filename');</b><div class="spacer">
+</div>
+<br/>
+<b class="fname">hasPrivateFilename</b>(<i class="farg">str</i>);</div>
+<div class="section">
+<h1 id="x4445534352495054494f4e">DESCRIPTION</h1> The <b class="name">has-private-filename</b>() extension takes a file base-name string representation and determines if it matches the common &#8220;private&#8221; file naming convention. In which private files are prefixed with an underscore &#8220;_&#8221; whereas standard files are not.</div>
+<div class="section">
+<h1 id="x52455455524e2056414c554553">RETURN VALUES</h1> Upon successful completion, the value of <b class="var">true</b> is returned; otherwise the value <b class="var">false</b> is returned to indicate the inverse.</div>
+<div class="section">
+<h1 id="x4558414d504c4553">EXAMPLES</h1> The following demonstrates the expected return values.<pre style="margin-left: 5.00ex;" class="lit display">
+ 
+&#180;use strict'; 
+ 
+var assert = require('assert'); 
+var hasPrivateFilename = require('has-private-filename'); 
+ 
+assert(hasPrivateFilename('_example.file') === true); 
+assert(hasPrivateFilename('example.file') === false);</pre>
+</div>
+<div class="section">
+<h1 id="x415554484f5253">AUTHORS</h1> <span class="author">Benner, James</span> &#10216;<a class="link-ext" href="radioactivehamster.com">radioactivehamster.com</a>&#10217;</div>
+</div>
+</body>
+</html>
+

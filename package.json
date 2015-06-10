@@ -1,0 +1,14 @@
+{
+  "name": "@radioactivehamster/has-private-filename",
+  "version": "0.1.0",
+  "description": "Determine if a filename is \"private\" e.g. prefixed with a \"_\" (underscore.)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "James Benner <james.benner@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}
